@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Wifey 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Sacramento&family=DM+Serif+Display:ital@0;1&family=Parisienne&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg,#ffe0e9,#f8c9d8,#fce9ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    overflow: hidden;
+    color: #713b50;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: rgba(255,255,255,.8);
+    pointer-events: none;
+    animation: floatUp linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: .9; }
+    to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    height: min(88vh, 850px);
+    min-height: 540px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    height: 100%;
+    background: rgba(255,255,255,.91);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 28px;
+    box-shadow: 0 20px 65px rgba(137,65,92,.2);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    padding: 19px 25px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bc6c88;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.progress {
+    height: 5px;
+    background: #f6e4ea;
+    margin: 0 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 9%;
+    height: 100%;
+    background: linear-gradient(90deg,#e98aa9,#b95a7d);
+    border-radius: 20px;
+    transition: width .6s ease;
+}
+
+.slide {
+    display: none;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 35px 48px 30px;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-color: #d98ba6 #f9eaf0;
+    overscroll-behavior: contain;
+}
+
+.slide::-webkit-scrollbar {
+    width: 7px;
+}
+
+.slide::-webkit-scrollbar-track {
+    background: #f9eaf0;
+    border-radius: 20px;
+}
+
+.slide::-webkit-scrollbar-thumb {
+    background: #d98ba6;
+    border-radius: 20px;
+}
+
+.slide.active {
+    display: block;
+    animation: slideIn .65s ease both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.slide h1 {
+    font-size: clamp(27px,5vw,38px);
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #a64f70;
+}
+
+.slide p {
+    font-size: 17px;
+    line-height: 1.95;
+    margin-bottom: 19px;
+    color: #70475a;
+}
+
+.slide .emoji {
+    font-size: 48px;
+    margin-bottom: 18px;
+    display: block;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    15% { transform: scale(1.13); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+}
+
+.slide .decoration {
+    font-size: 23px;
+    letter-spacing: 9px;
+    margin: 22px 0;
+}
+
+.slide:nth-of-type(1) { font-family:'Dancing Script',cursive; }
+.slide:nth-of-type(1) p { font-size:21px; }
+
+.slide:nth-of-type(2) { font-family:'Playfair Display',serif; }
+.slide:nth-of-type(3) { font-family:'Cormorant Garamond',serif; }
+.slide:nth-of-type(3) p { font-size:20px; }
+.slide:nth-of-type(4) { font-family:'Lora',serif; }
+.slide:nth-of-type(5) { font-family:'Quicksand',sans-serif; }
+.slide:nth-of-type(6) { font-family:'DM Serif Display',serif; }
+.slide:nth-of-type(7) { font-family:'Libre Baskerville',serif; }
+.slide:nth-of-type(7) p { font-size:15px; }
+.slide:nth-of-type(8) { font-family:'Pacifico',cursive; }
+.slide:nth-of-type(8) p { font-family:'Cormorant Garamond',serif;font-size:21px; }
+.slide:nth-of-type(9) { font-family:'Great Vibes',cursive; }
+.slide:nth-of-type(9) p { font-family:'Lora',serif; }
+.slide:nth-of-type(10) { font-family:'Parisienne',cursive; }
+.slide:nth-of-type(10) p { font-family:'Lora',serif;font-size:15px; }
+.slide:nth-of-type(11) { font-family:'Sacramento',cursive; }
+
+.letter-title {
+    font-family:'Playfair Display',serif;
+    font-size:29px !important;
+}
+
+.signature {
+    font-family:'Dancing Script',cursive;
+    font-size:25px !important;
+    color:#b34f76 !important;
+}
+
+.highlight {
+    color:#b84e77;
+    font-weight:bold;
+}
+
+.proposal {
+    font-family:'Playfair Display',serif;
+    color:#b44d75;
+    font-size:clamp(25px,5vw,37px);
+    line-height:1.5;
+    margin:25px 0;
+}
+
+.controls {
+    padding: 17px 23px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #f6e5eb;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 24px;
+    font-size: 14px;
+    font-family:'Quicksand',sans-serif;
+    font-weight:700;
+    cursor:pointer;
+    transition: transform .25s,box-shadow .25s,background .25s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(177,80,116,.25);
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+#prev {
+    background:#f8e7ed;
+    color:#a94d70;
+}
+
+#next {
+    background:linear-gradient(135deg,#d66e91,#ad4e74);
+    color:white;
+    animation: nextGlow 2s infinite;
+}
+
+@keyframes nextGlow {
+    0%,100% { box-shadow:0 0 0 0 rgba(190,83,122,.2); }
+    50% { box-shadow:0 0 0 7px rgba(190,83,122,0); }
+}
+
+#prev:disabled {
+    opacity:.3;
+    cursor:not-allowed;
+}
+
+#next:disabled {
+    opacity:.4;
+    cursor:not-allowed;
+}
+
+.slide-number {
+    font-family:'Quicksand',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:#b56b85;
+}
+
+.final-heart {
+    font-size:55px;
+    display:inline-block;
+    animation:heartbeat 1.4s infinite;
+}
+
+@media(max-width:600px) {
+    body { padding:10px; }
+    .container { height:92vh; min-height:0; }
+    .card { border-radius:21px; }
+    .slide { padding:27px 23px 25px; }
+    .slide p { font-size:15px;line-height:1.85; }
+    .slide h1 { font-size:28px; }
+    .slide:nth-of-type(1) p { font-size:18px; }
+    .controls { padding:13px 15px; }
+    button { padding:12px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="floating"></div>
+
+<div class="container">
+<div class="card">
+
+<div class="top">
+    <span>💗 A LITTLE SOMETHING FOR YOU</span>
+    <span>♡ Forever ♡</span>
+</div>
+
+<div class="progress">
+    <div class="progress-fill" id="progress"></div>
+</div>
+
+<!-- SLIDE 1 -->
+<section class="slide active">
+<span class="emoji">🌷</span>
+<h1>Before You Read This, There's Something I Want to Say…</h1>
+
+<p>Hey, my wifey! 💖</p>
+
+<p>Today, I have something special for you. Something that I've wanted to express through more than just ordinary messages.</p>
+
+<p>I made this little card because you deserve to feel special, appreciated and loved. So, take a moment, read every slide and remember that every word comes straight from my heart. 🥹</p>
+
+<div class="decoration">♡ 🌷 ♡</div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+<span class="emoji">🦋</span>
+<h1>My Favourite Chapter Is the One With You.</h1>
+
+<p>Life has so many chapters, but somehow, the one that includes you has become my favourite.</p>
+
+<p>I don't know what made our connection so special, but I'm genuinely happy that I got to know you.</p>
+
+<p>You have become a beautiful part of my thoughts, my happiness and my everyday little moments. 💖</p>
+
+<div class="decoration">🦋 ✨ 🦋</div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+<span class="emoji">🌹</span>
+<h1>Among Millions, My Heart Found You.</h1>
+
+<p>There are so many people in this world, yet some people hold a place that nobody else can replace.</p>
+
+<p>For me, you're one of those people.</p>
+
+<p>I don't need a thousand reasons to appreciate you. Your existence itself gives me enough reasons to feel lucky. Never doubt how special you are to me. 🫶🏻</p>
+
+<div class="decoration">🌹 ♡ 🌹</div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+<span class="emoji">💖</span>
+<h1>You're More Than Just a Beautiful Person.</h1>
+
+<p>Your beauty isn't limited to your smile or appearance.</p>
+
+<p>It's in your personality, your heart, your thoughts and all those little things that make you uniquely YOU.</p>
+
+<p>I hope you never feel the need to change yourself just to be appreciated. You deserve to be loved and respected exactly as you are. 🌷</p>
+
+<div class="decoration">♡ ✨ ♡</div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+<span class="emoji">🫶</span>
+<h1>The Little Things That Make Me Fall for You.</h1>
+
+<p>It's your random messages, your cute reactions, our silly conversations and even those little arguments.</p>
+
+<p>Sometimes, it's not about doing something extraordinary. It's about finding happiness in the simplest moments with someone.</p>
+
+<p>And honestly, those little moments with you are some of my favourites. 🥹💗</p>
+
+<div class="decoration">💗 🌸 💗</div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+<span class="emoji">🌙</span>
+<h1>You're My Today and All My Tomorrows.</h1>
+
+<p>I don't just want beautiful memories with you today.</p>
+
+<p>I hope we get to celebrate achievements, overcome difficulties, share dreams and create countless memories in the future.</p>
+
+<p>I want to see you grow, achieve everything you dream of and always know that your happiness matters. 💖</p>
+
+<div class="decoration">🌙 ♾️ ✨</div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide">
+<span class="emoji">💌</span>
+<h1>A Promise I Truly Want to Make.</h1>
+
+<p>I cannot promise that every day will be perfect, but I can promise to value what we share.</p>
+
+<p>I'll always try to understand your feelings, respect your opinions and communicate honestly.</p>
+
+<p>I want our connection to be built on trust, loyalty, respect and genuine efforts rather than just beautiful words. ♾️</p>
+
+<div class="decoration">🤍 ♾️ 🤍</div>
+</section>
+
+<!-- SLIDE 8 -->
+<section class="slide">
+<span class="emoji">✨</span>
+<h1>If Forever Has a Name, It's Yours.</h1>
+
+<p>If someone asks me what kind of future I dream about, I would say one filled with happiness, peace, beautiful memories and someone who makes ordinary days meaningful.</p>
+
+<p>I don't know every detail of tomorrow, but I know that having you in my hopes for the future makes it even more beautiful.</p>
+
+<p>And now, there's just one question left… 🥺</p>
+
+<div class="decoration">✨ ♡ ✨</div>
+</section>
+
+<!-- SLIDE 9 -->
+<section class="slide">
+<span class="emoji">💍</span>
+<h1>So, My Wifey… Will You Be Mine Forever?</h1>
+
+<p>My favourite person, 💖</p>
+
+<p>This little proposal isn't about making a perfect promise. It's about expressing how genuinely special you are to me.</p>
+
+<p>I want to keep choosing you, appreciating you, understanding you and making beautiful memories together.</p>
+
+<div class="decoration">💍 💗 💍</div>
+</section>
+
+<!-- SLIDE 10: SPECIAL LETTER -->
+<section class="slide">
+<span class="emoji">💌</span>
+<h1 class="letter-title">One Last Thing I Want You to Know…</h1>
+
+<p><b>My Dearest Wifey,</b></p>
+
+<p>As you reach the end of this little card, I want to leave you with something more meaningful than just a few romantic words.</p>
+
+<p>I want you to understand that my feelings for you are not just about the happiness of today or the beautiful moments we share. I genuinely value you as a person, your individuality, your dreams, your opinions and everything that makes you who you are.</p>
+
+<p>I know that no relationship is perfect. There will be days when we understand each other effortlessly and days when we might struggle to find the right words. But I believe what matters is how two people choose to handle those moments. I would always prefer an honest conversation over assumptions, understanding over ego and genuine effort over empty promises.</p>
+
+<p>I don't expect you to be perfect, and I don't want you to feel that you have to be someone else to make me happy. I want you to grow, achieve your goals, experience life and become everything you aspire to be. Your dreams matter just as much as mine.</p>
+
+<p>I cannot predict every chapter of our future, but I can tell you that my intentions towards you are genuine. I want to build something meaningful, where both of us feel respected, heard, appreciated and comfortable being ourselves.</p>
+
+<p>I may not always find the perfect words to express what I feel, but I hope my actions will consistently reflect the respect and care I have for you.</p>
+
+<p>Thank you for being a part of my life and for giving me someone so special to appreciate.</p>
+
+<p class="highlight">If there's one thing I want you to take away from this letter, it's this: I don't just want to be someone who makes you smile today; I want to be someone whose presence adds peace, support and happiness to your life.</p>
+
+<p>And whatever the future brings, I hope we always choose honesty, respect and each other.</p>
+
+<p class="highlight">I LOVE YOU VERYYY MUCHHH, MY WIFEY! 💖🥹</p>
+
+<p>Not just because of the beautiful moments we share, but because of the person you are. I hope you never forget how much you mean to me.</p>
+
+<p>With genuine love and sincerity,</p>
+
+<p class="signature">Yours, Always. 💗✨</p>
+
+<p><i>Not just beautiful words, but a genuine intention behind every one of them. ♾️</i></p>
+</section>
+
+<!-- SLIDE 11: FINAL PROPOSAL -->
+<section class="slide">
+<span class="emoji">💗</span>
+
+<h1>So, My Wifey…</h1>
+
+<div class="proposal">
+WILL YOU ACCEPT MY LITTLE PROPOSAL? 💍
+</div>
+
+<p><b>Will you continue writing this beautiful story with me?</b></p>
+
+<p>I LOVE YOU SO MUCH! 💗🫶🏻</p>
+
+<div class="decoration">🌷 ♡ 🌷</div>
+
+<div class="final-heart">💖</div>
+
+<p style="font-family:'Playfair Display',serif;font-style:italic;">
+Forever isn't just a word; it's a hope I would love to build with you. 🌙
+</p>
+
+<p class="signature">With all my love, Yours Always. 💗</p>
+</section>
+
+<div class="controls">
+<button id="prev" onclick="changeSlide(-1)" disabled>← Previous</button>
+
+<span class="slide-number" id="counter">01 / 11</span>
+
+<button id="next" onclick="changeSlide(1)">Next Slide →</button>
+</div>
+
+</div>
+</div>
+
+<script>
+let currentSlide = 0;
+
+const slides = document.querySelectorAll('.slide');
+const progress = document.getElementById('progress');
+const counter = document.getElementById('counter');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+function updateSlides() {
+    slides.forEach((slide,index) => {
+        slide.classList.toggle('active',index === currentSlide);
+
+        if(index === currentSlide) {
+            slide.scrollTop = 0;
+        }
+    });
+
+    prev.disabled = currentSlide === 0;
+    next.disabled = currentSlide === slides.length - 1;
+
+    counter.textContent =
+        String(currentSlide + 1).padStart(2,'0') +
+        ' / ' + String(slides.length).padStart(2,'0');
+
+    progress.style.width =
+        ((currentSlide + 1) / slides.length * 100) + '%';
+}
+
+function changeSlide(direction) {
+    const nextSlide = currentSlide + direction;
+
+    if(nextSlide < 0 || nextSlide >= slides.length) return;
+
+    currentSlide = nextSlide;
+    updateSlides();
+}
+
+document.addEventListener('keydown',function(e) {
+    if(e.key === 'ArrowRight') changeSlide(1);
+    if(e.key === 'ArrowLeft') changeSlide(-1);
+});
+
+// Floating hearts and sparkles
+const floating = document.getElementById('floating');
+const symbols = ['♡','💗','🌸','✨','💕'];
+
+function createFloating() {
+    const item = document.createElement('span');
+    item.className = 'heart';
+    item.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+
+    item.style.left = Math.random()*100 + 'vw';
+    item.style.fontSize = (14 + Math.random()*18) + 'px';
+
+    const duration = 7 + Math.random()*8;
+    item.style.animationDuration = duration + 's';
+
+    floating.appendChild(item);
+
+    setTimeout(() => item.remove(),duration*1000);
+}
+
+setInterval(createFloating,650);
+
+updateSlides();
+</script>
+
+</body>
+</html>
